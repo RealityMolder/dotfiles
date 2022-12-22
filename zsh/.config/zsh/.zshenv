@@ -22,7 +22,9 @@ export PNPM_HOME="~/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Move files according to the XDG standard
-export ANDROID_HOME="$XDG_DATA_HOME"/android # ANDROID STUDIO
+export ANDROID_HOME="$XDG_DATA_HOME"/android/ # ANDROID HOME
+export ANDROID_SDK_ROOT="$ANDROID_HOME"/sdk   # ANDROID SDK
+export ANDROID_AVD_HOME="$ANDROID_HOME"/avd   # ANDROID AVD
 export FVM_HOME="$XDG_DATA_HOME"/fvm
 export CARGO_HOME="$XDG_DATA_HOME"/cargo # CARGO 
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc # NPM
