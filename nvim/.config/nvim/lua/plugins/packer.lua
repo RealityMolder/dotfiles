@@ -10,8 +10,11 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- nvim LSP configs
-	use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
+    use { "williamboman/mason.nvim" }
+    use { "williamboman/mason-lspconfig.nvim" }
+    use 'williamboman/nvim-lspconfig'
+
+    require("mason").setup()
 
     -- Completions engine
 	use 'hrsh7th/cmp-nvim-lsp'

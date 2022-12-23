@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 require "globals.options"
 require "globals.remaps"
 
-require "lsp.lsp"
+--require "lsp.lsp"
 
 require 'plugins.packer'
 
