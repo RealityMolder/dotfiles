@@ -1,3 +1,6 @@
+-- [[ Setting options ]]
+-- See `:help vim.o`
+
 vim.o.exrc = true  -- exec a local vimrc (like direnv)
 vim.o.relativenumber = true  -- relative number in gutter
 vim.o.nu = true  -- Indent current line number
@@ -35,3 +38,11 @@ vim.o.updatetime = 100
 -- Set up automatic spell checking
 vim.opt.spelllang = 'en'
 vim.opt.spell = true
+
+-- MOAR? 
+
+vim.wo.number = true -- Make line numbers default
+vim.o.breakindent = true -- Enable break indent
+--vim.o.undofile = true -- Save undo history
+vim.o.termguicolors = true -- Set colorscheme
+vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience

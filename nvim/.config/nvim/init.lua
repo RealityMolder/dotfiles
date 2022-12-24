@@ -1,6 +1,3 @@
--- Leader key is a space
-vim.g.mapleader = " "
-
 -- Setup globals that should always be around
 -- See `./lua/globals
 require "globals.options"
@@ -8,12 +5,18 @@ require "globals.remaps"
 
 require "lsp.lsp"
 
-require 'plugins.packer'
+require 'plugin-manager.packer'
 
--- Local dev of nvim-go
-require 'nvim-go'.setup()
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
 
---vim.api.nvim_create_autocmd({"BufWrite"}, {
-	--pattern = {"*.go"},
-	--command = "echo 'Entering a Go file'",
---})
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
