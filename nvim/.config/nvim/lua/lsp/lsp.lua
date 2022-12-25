@@ -51,17 +51,26 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  clangd = {},
-  gopls = {},
-  -- pyright = {},
-  rust_analyzer = {},
-  tsserver = {},
-  svelte = {},
+  -- Lua: --
   sumneko_lua = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
+  yaml ={},
+  -- Low Level: --
+  clangd = {},
+  gopls = {},
+  rust_analyzer = {},
+  -- pyright = {},
+  -- Web Dev: --
+  html = {},
+  cssls = {},
+  tsserver = {},
+  tailwindcss ={},
+  svelte = {},
+  jsonls = {},
+  emmet_ls = {},
   },
 }
 
